@@ -139,7 +139,10 @@ const PortfolioSection = () => {
           setIsVisible(true);
         }
       },
-      { threshold: 0.2 }
+      { 
+        threshold: 0.1,
+        rootMargin: '50px 0px -50px 0px'
+      }
     );
 
     if (sectionRef.current) {
@@ -153,12 +156,12 @@ const PortfolioSection = () => {
     <section 
       id="portfolio" 
       ref={sectionRef}
-      className="py-12 md:py-16 lg:py-20 bg-gray-50 min-h-screen"
+      className="py-12 md:py-16 lg:py-20 bg-gray-50 min-h-screen portfolio-visible"
     >
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="text-center mb-8 md:mb-12"
         >
@@ -174,7 +177,7 @@ const PortfolioSection = () => {
         {/* Filter Buttons - Mobile Optimized */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
           className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 md:mb-12 px-2"
         >
@@ -185,7 +188,7 @@ const PortfolioSection = () => {
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
               initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
               className={`px-3 py-2 sm:px-4 md:px-6 text-xs sm:text-sm rounded-full transition-all duration-300 ${
                 selectedCategory === category
@@ -204,7 +207,7 @@ const PortfolioSection = () => {
             <motion.div 
               key={item.id}
               initial={{ opacity: 0, y: 40, scale: 0.95 }}
-              animate={isVisible ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 40, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ 
                 duration: 0.6, 
                 delay: 0.4 + index * 0.1, 
@@ -223,6 +226,7 @@ const PortfolioSection = () => {
                     src={item.image} 
                     alt={item.title}
                     className="w-full h-48 sm:h-56 md:h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 sm:p-6">
                     <div className="text-white">

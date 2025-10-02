@@ -144,3 +144,57 @@
   visibility: visible !important;
   opacity: 1 !important;
 }
+
+/* Ensure portfolio loads automatically */
+#portfolio {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Auto-display portfolio items */
+#portfolio .group,
+#portfolio .grid > div {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Portfolio section auto-load animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.portfolio-auto-load {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Mobile Portfolio Auto-Load Fixes */
+@media (max-width: 768px) {
+  /* ...existing mobile code... */
+  
+  /* Ensure portfolio auto-loads on mobile */
+  #portfolio {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    background-color: #f9fafb !important;
+    min-height: auto !important;
+  }
+  
+  /* Auto-show portfolio items on mobile */
+  #portfolio .group,
+  #portfolio .grid > div,
+  #portfolio img {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}

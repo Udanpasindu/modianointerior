@@ -69,7 +69,15 @@
     display: grid;
   }
   
-  /* Ensure proper background visibility */
+  /* Force portfolio section to display */
+  #portfolio {
+    display: block !important;
+    visibility: visible !important;
+    background-color: #f9fafb !important;
+    min-height: auto !important;
+  }
+  
+  /* Remove problematic gradient backgrounds on mobile */
   .bg-gradient-light,
   .bg-gradient-ash,
   .bg-gradient-cream,
@@ -79,8 +87,8 @@
   .bg-ivory,
   .bg-mint-light,
   .bg-lavender-light {
-    min-height: 1px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background: #f9fafb !important;
+    background-image: none !important;
   }
 }
 
@@ -104,6 +112,19 @@
     bottom: 1rem;
     right: 1rem;
   }
+  
+  /* Ensure portfolio items are visible */
+  .group {
+    display: block !important;
+    visibility: visible !important;
+  }
+  
+  /* Force portfolio images to show */
+  .group img {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
 }
 
 /* WhatsApp button hover effects */
@@ -115,4 +136,11 @@
 /* Ensure WhatsApp button stays above other elements */
 .z-50 {
   z-index: 50;
+}
+
+/* Force visibility for portfolio section */
+.portfolio-visible {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }

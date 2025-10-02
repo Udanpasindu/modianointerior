@@ -1,8 +1,7 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .logo {
@@ -39,4 +38,81 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/* Mobile Portfolio Fixes */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .section-padding {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  .image-overlay {
+    position: relative;
+  }
+  
+  /* Ensure images display properly on mobile */
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Fix for portfolio grid on mobile */
+  .grid {
+    width: 100%;
+    display: grid;
+  }
+  
+  /* Ensure proper background visibility */
+  .bg-gradient-light,
+  .bg-gradient-ash,
+  .bg-gradient-cream,
+  .bg-gradient-pearl,
+  .bg-gradient-warm,
+  .bg-gradient-cool,
+  .bg-ivory,
+  .bg-mint-light,
+  .bg-lavender-light {
+    min-height: 1px;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+/* Additional mobile fixes */
+@media (max-width: 640px) {
+  .text-4xl {
+    font-size: 2rem;
+  }
+  
+  .text-5xl {
+    font-size: 2.5rem;
+  }
+  
+  .container-padding {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  /* WhatsApp button mobile positioning */
+  .fixed.bottom-6.right-6 {
+    bottom: 1rem;
+    right: 1rem;
+  }
+}
+
+/* WhatsApp button hover effects */
+.bg-green-500:hover {
+  background-color: #16a34a;
+  box-shadow: 0 10px 25px rgba(34, 197, 94, 0.3);
+}
+
+/* Ensure WhatsApp button stays above other elements */
+.z-50 {
+  z-index: 50;
 }

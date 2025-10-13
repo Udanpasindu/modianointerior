@@ -18,6 +18,10 @@ All colors MUST be HSL. Sophisticated white & ash gray palette.
     --surface: 0 0% 98%;
     --surface-secondary: 0 0% 95%;
     
+    /* Popover Colors */
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 15%;
+    
     /* Ash Gray & Light Color Palette */
     --ash-light: 0 0% 90%;
     --ash-medium: 0 0% 75%;
@@ -128,6 +132,9 @@ All colors MUST be HSL. Sophisticated white & ash gray palette.
     --card-foreground: 0 0% 95%;
     --surface: 0 0% 12%;
     --surface-secondary: 0 0% 15%;
+    
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 95%;
     
     --ash-light: 0 0% 25%;
     --ash-medium: 0 0% 40%;

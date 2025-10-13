@@ -12,3 +12,11 @@ yarn-error.log*
 coverage
 .nyc_output
 .cache
+dist
+.git
+.gitignore
+README.md
+.eslintrc.*
+.prettierrc
+tsconfig.json
+vite.config.ts

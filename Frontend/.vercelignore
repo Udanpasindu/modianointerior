@@ -17,8 +17,8 @@ coverage
 README.md
 .eslintrc.*
 .prettierrc
-tsconfig.json
 vite.config.ts
 netlify.toml
 _redirects
+.nvmrc
 .nvmrc
